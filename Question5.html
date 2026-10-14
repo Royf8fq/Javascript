@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p>Enter your current balance:</p>
+        <input type="number" id="balance" value=""><br>
+        <p>Enter your interest rate:</p>
+        <input type="string" id="interest" value=""><br>
+        <button onclick="calculateInterest()">Click Me</button>
+        <script>
+            function calculateInterest(){
+                let balance = Number(document.getElementById("balance").value);
+                let interest = document.getElementById("interest").value;
+                interest = parseFloat(interest)/100
+                for (i = 0; i < 3; i++){
+                    balance = balance + (balance * interest)
+                    document.write("year ", i+1, ": ", balance, "<br>")
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <button onclick="randDice()">Click Me</button>
+        <script>
+            function randDice(){
+                let num1 = Math.floor(Math.random() * 6);
+                let unit = ["one", "two", "three", "four", "five", "six"];
+                let engNum = unit[num1];
+                document.write(engNum)
+            }
+        </script>
+    </body>
+</html>

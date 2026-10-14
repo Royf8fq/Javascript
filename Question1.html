@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="number" id="num1" value="5">
+        <button onclick="diceFunc()">Click Me</button>
+        <script>
+            function diceFunc(){
+                let num = Number(document.getElementById("num1").value);
+                if (num === 5){
+                    document.write(     "oooooooooooo" + "<br>");
+                    document.write("<pre>o           o</pre>");
+                    document.write("<pre>o   #   #   o</pre>");
+                    document.write("<pre>o     #     o</pre>");
+                    document.write("<pre>o   #   #   o</pre>");
+                    document.write("<pre>o           o</pre>");
+                    document.write(     "oooooooooooo");
+                }
+            }
+        </script>
+    </body>
+</html>

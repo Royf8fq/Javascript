@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p>Enter how many umbers are to be averaged:</p>
+        <input type="number" id="num1" value=""><br>
+        <button onclick="averageNum()">Click Me</button>
+        <script>
+            function averageNum(){
+                let total = 0;
+                let num1 = Number(document.getElementById("num1").value);
+                for (let i = 0; i < num1; i++){
+                    let num2 = Number(prompt("Please enter a number:", ""));
+                    total = total + num2;
+                }
+                let average = total/num1
+                document.write("The total of the numbers is ", total, " and the average is ", average)
+            }
+        </script>
+    </body>
+</html>

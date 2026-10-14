@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p>Enter the mark for project analysis:</p>
+        <input type="number" id="num1" value="25"><br>
+        <p>Enter the mark for project design:</p>
+        <input type="number" id="num2" value="25"><br>
+        <p>Enter the mark for project implementation:</p>
+        <input type="number" id="num3" value="25"><br>
+        <p>Enter the mark for project evaluation:</p>
+        <input type="number" id="num4" value="25"><br>
+        <button onclick="addNum()">Click Me</button>
+        <script>
+            function addNum(){
+                let num1 = Number(document.getElementById("num1").value);
+                let num2 = Number(document.getElementById("num2").value);
+                let num3 = Number(document.getElementById("num3").value);
+                let num4 = Number(document.getElementById("num4").value);
+                let numTotal = num1 + num2 + num3 + num4;
+                switch(true){
+                    case (numTotal < 4):
+                        numNeeded = 4 - numTotal;
+                        text = `Total mark is 100, your grade is U, ${numNeeded} more mark is needed to get into the next mark band.`;
+                        break;
+                    case (numTotal < 13):
+                        numNeeded = 13 - numTotal;
+                        text = `Total mark is 100, your grade is G, ${numNeeded} more mark is needed to get into the next mark band.`;
+                        break;
+                    case (numTotal < 22):
+                        numNeeded = 22 - numTotal;
+                        text = `Total mark is 100, your grade is F, ${numNeeded} more mark is needed to get into the next mark band.`;
+                        break;
+                    case (numTotal < 31):
+                        numNeeded = 31 - numTotal;
+                        text = `Total mark is 100, your grade is E, ${numNeeded} more mark is needed to get into the next mark band.`;
+                        break;
+                    case (numTotal < 41):
+                        numNeeded = 41 - numTotal;
+                        text = `Total mark is 100, your grade is D, ${numNeeded} more mark is needed to get into the next mark band.`;
+                        break;
+                    case (numTotal < 54):
+                        numNeeded = 54 - numTotal;
+                        text = `Total mark is 100, your grade is C, ${numNeeded} more mark is needed to get into the next mark band.`;
+                        break;
+                    case (numTotal < 67):
+                        numNeeded = 67 - numTotal;
+                        text = `Total mark is 100, your grade is B, ${numNeeded} more mark is needed to get into the next mark band.`;
+                        break;
+                    case (numTotal < 80):
+                        numNeeded = 80 - numTotal;
+                        text = `Total mark is 100, your grade is A, ${numNeeded} more mark is needed to get into the next mark band.`;
+                        break;
+                    case (numTotal <= 100):
+                        numNeeded = 100 - numTotal;
+                        text = `Total mark is 100, your grade is A*, ${numNeeded} more mark is needed to get into the next mark band.`;
+                        break;
+                }
+                document.write(text);
+            }
+        </script>
+    </body>
+</html>

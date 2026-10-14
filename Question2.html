@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="number" id="num1" value="">
+        <input type="number" id="num2" value="">
+        <button onclick="addNum()">Click Me</button>
+        <script>
+            function addNum(){
+                let num1 = Number(document.getElementById("num1").value);
+                let num2 = Number(document.getElementById("num2").value);
+                let sum = num1 + num2;
+                document.write("You entered numbers ", num1, " and ", num2, "<br>")
+                document.write("They add up to ", sum)
+            }
+        </script>
+    </body>
+</html>
